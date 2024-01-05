@@ -1,0 +1,22 @@
+[build-system]
+requires = ["flit_core >=3.2,<4"]
+build-backend = "flit_core.buildapi"
+
+[project]
+name = "aashto_plastic_pipe_check"
+authors = [{name = "Ricky L Teachey Jr", email = "ricky@teachey.org"}]
+license = {file = "LICENSE"}
+classifiers = ["License :: OSI Approved :: MIT License"]
+dynamic = ["version", "description"]
+dependencies = [
+    "excalc-py>=0.0.4",
+    "pint>=0.23",
+]
+
+[project.urls]
+Home = "https://github.com/Ricyteach/aashto_plastic_pipe_check"
+
+[project.optional-dependencies]
+test = [
+    "pytest >=7.4",
+]
