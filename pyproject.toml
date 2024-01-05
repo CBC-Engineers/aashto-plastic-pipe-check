@@ -14,7 +14,7 @@ dependencies = [
 ]
 
 [project.urls]
-Home = "https://github.com/Ricyteach/aashto_plastic_pipe_check"
+Home = "https://github.com/CBC-Engineers/aashto-plastic-pipe-check"
 
 [project.optional-dependencies]
 test = [
