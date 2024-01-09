@@ -19,7 +19,7 @@ U = UnitRegistry()
 
 RNG_UNITS_DICT = dict[str, (str, Unit | None)](
     pipe_type=("PipeType", None),
-    OD_nom=("OD_nom", U.inch),
+    D_nom=("D_nom", U.inch),
     H=("H", U.feet),
     H_gw=("H_gw", U.feet),
     γ_soil=("γ_soil", U.lbf / U.feet**3),
@@ -73,7 +73,7 @@ INPUT_UNITS_DCT = {
 @create_calculation(OUTPUT_RNG, **INPUT_RNG_DCT)
 def check(
     pipe_type: Literal["DR17", "DR32.5"],
-    OD_nom: Quantity,
+    D_nom: Quantity,
     H: Quantity,
     H_gw: Quantity,
     γ_soil: Quantity,

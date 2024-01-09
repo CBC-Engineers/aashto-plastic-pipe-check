@@ -15,7 +15,7 @@ def xw_app():
     params=[
         dict(
             pipe_type=None,
-            OD_nom=None,
+            D_nom=None,
             H=None,
             H_gw=None,
             γ_soil=None,
@@ -32,28 +32,28 @@ def xw_app():
         ),
         dict(
             pipe_type=None,
-            OD_nom=None,
+            D_nom=None,
             H=None,
             H_gw=None,
             γ_soil=None,
         ),
         dict(
             pipe_type="32.5",
-            OD_nom=48*U.inch,
+            D_nom=48*U.inch,
             H=10*U.ft,
             H_gw=10*U.ft,
             γ_soil=120.0*U.lbf/U.ft**3,
         ),
         dict(
             pipe_type="32.5",
-            OD_nom="48 * inch",
+            D_nom="48 * inch",
             H="10 * ft",
             H_gw="10 * ft",
             γ_soil="120.0 * lbf / ft ** 3",
         ),
         dict(
             pipe_type="32.5",
-            OD_nom=48 * FOREIGN_REG.inch,
+            D_nom=48 * FOREIGN_REG.inch,
             H=10 * FOREIGN_REG.ft,
             H_gw=10 * FOREIGN_REG.ft,
             γ_soil=120.0 * FOREIGN_REG.lbf / FOREIGN_REG.ft ** 3,
