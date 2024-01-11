@@ -1,6 +1,6 @@
 """AASHTO 12.12.3- Thermoplastic Pipe Checks"""
 
-__version__ = "0.0.1"
+__version__ = "0.1.0"
 
 from typing import Literal, Callable
 import xlwings as xw
