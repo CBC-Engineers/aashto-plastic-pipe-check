@@ -1,6 +1,6 @@
 """AASHTO 12.12.3- Thermoplastic Pipe Checks"""
 
-__version__ = "0.1.0"
+__version__ = "0.1.1"
 
 from typing import Literal, Callable
 import xlwings as xw
@@ -73,22 +73,22 @@ INPUT_UNITS_DCT = {
 @adapt_function(**INPUT_UNITS_DCT)
 @create_calculation(OUTPUT_RNG, **INPUT_RNG_DCT)
 def check(
-    pipe_type: Literal["DR17", "DR32.5"],
-    D_nom: Quantity,
-    H: Quantity,
-    H_gw: Quantity,
-    γ_soil: Quantity,
+    pipe_type: Literal["DR17", "DR32.5"] = None,
+    D_nom: Quantity = None,
+    H: Quantity = None,
+    H_gw: Quantity = None,
+    γ_soil: Quantity = None,
     Ms: Quantity = None,
     E_prime: Quantity = None,
     soil_class: Literal["I", "IA", "IB", "II", "III"] = None,
     compaction: Literal["Compacted", "Uncompacted", "85%", "90%", "95%", "100%"] = None,
     proctor: Literal["Standard Proctor", "Modified Proctor"] = None,
     grain: Literal["Gravel", "Sand"] = None,
-    ν: float = 0.35,
-    E_long: Quantity = 22_000 * U.psi,
-    E_short: Quantity = 110_000 * U.psi,
-    Fy_long: Quantity = 1_440 * U.psi,
-    Fy_short: Quantity = 3_000 * U.psi,
+    ν: float = None,
+    E_long: Quantity = None,
+    E_short: Quantity = None,
+    Fy_long: Quantity = None,
+    Fy_short: Quantity = None,
 ):
     """Uses the AASHTO plastic pipe structural calcs.xlsx spreadsheet to perform structural checks based on inputs."""
     ...
